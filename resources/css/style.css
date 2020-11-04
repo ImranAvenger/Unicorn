@@ -29,19 +29,22 @@ ul li {
     max-width: 114rem;
     margin: 0 auto;
 }
+.box {
+    padding: 1%;
+}
 
 
 /* ==================== */
-/* REUSABLE COMPONENTS  */
+/* HEADER SECTION       */
 /* ==================== */
 
 header {
     background: url(img/header-bg.jpg);
     background-repeat: no-repeat;
-    height: 100rem;
-    
-    position: relative;
+    height: 100rem;  
+
     background-attachment: scroll;
+    background-position: center center;
     
 }
 a.h-icon {
@@ -75,7 +78,7 @@ a.h-icon {
     font-size: 2rem;
 }
 h1 {
-    font-size: 4rem;
+    font-size: 6rem;
     text-transform: uppercase;
     margin: 40rem 6rem 0 0;
     float: right;
@@ -92,18 +95,78 @@ h1::after {
     margin-top: 1rem;
     margin-left: 30rem;
 }
-.little-description {
+header p {
     font-size: 1.8rem;
     display: inline-block;
     font-weight: 400;
     margin: 4rem 6rem 0 55rem;
-    text-align: right; 
+    text-align: right;
+    line-height: 2;
+    color: black;
 }
 .btn {
     float: right;
     margin-right: 6rem;
     padding: .3rem 3.15rem;
-    border: .07rem solid #232323;
+    border: .2rem solid #232323;
     text-decoration: none; 
     margin-top: 5rem; 
+    font-weight: 600;
+}
+
+
+/* ===================== */
+/* WHO & WHY (1) SECTION */
+/* ===================== */
+.who-and-why1 {
+    background: white;
+    background-position: center center;
+    padding-top: 9rem;
+    padding-bottom: 9rem;
+}
+.who-and-why1 .row img {
+    display: block;
+    margin-left: auto;
+    margin: auto;
+    height: 3.9rem;
+    width: 3.9rem;
+}
+.who-and-why1 .row h2 {
+    text-transform: capitalize;
+    text-align: center;
+    margin-top: 2rem;
+    font-weight: 900;
+}
+.who-and-why1 .row p {
+    text-align: center;
+    margin-top: 6rem;
+    line-height: 2;
+    font-weight: 400;
+}
+
+
+/* ===================== */
+/* WHO & WHY (2) SECTION */
+/* ===================== */
+
+.who-and-why2 {
+    background: #efefef;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+}
+.who-and-why2 h3 {
+    color: black;
+    margin-top: 4rem;
+}
+.who-icon2 {
+    height: 3.5rem;
+    margin-bottom: 1.2rem;
+}
+.little-description {
+    margin-top: 2rem;
+    line-height: 1.5;
+}
+.who-and-why2 .box {
+    padding: 0 5rem 0 5rem;
 }
