@@ -1,6 +1,8 @@
 /* ==================== */
 /* BASIC SETUP          */
 /* ==================== */
+
+
 * {
     margin: 0;
     padding: 0;
@@ -20,10 +22,16 @@ body {
 ul li {
     list-style: none;
 }
+:focus {
+    outline: 0;
+}
+
 
 /* ==================== */
 /* REUSABLE COMPONENTS  */
 /* ==================== */
+
+
 
 .row {
     max-width: 114rem;
@@ -32,7 +40,21 @@ ul li {
 .box {
     padding: 1%;
 }
-
+h2 {
+    text-transform: capitalize;
+    text-align: center;
+    margin-top: 2rem;
+    font-weight: 900;
+    letter-spacing: .2rem;
+}
+.l-description {
+    text-align: center;
+    margin-top: 4rem;
+    margin-left: 15rem;
+    margin-right: 15rem;
+    line-height: 2;
+    font-weight: 400;
+}
 
 /* ==================== */
 /* HEADER SECTION       */
@@ -42,29 +64,25 @@ header {
     background: url(img/header-bg.jpg);
     background-repeat: no-repeat;
     height: 100rem;  
-
-    background-attachment: scroll;
     background-position: center center;
-    
 }
+/* MAIN NAVIGATION BAR */
 a.h-icon {
     display: inline-block;
-    margin-top: 4.66rem;
-    margin-left: 6rem;
-    font-size: 2.5rem;
+    margin-top: 5.5rem;
+    font-size: 1.8rem;
     text-transform: uppercase;
     text-decoration: none;
-    color: #212121;
+    color: black;
     font-weight: 700;
 }
 .main-nav {
     float: right;
-    margin-top: 5rem;
-    margin-right: 6rem;
+    margin-top: 5.7rem;
 }
 .main-nav li {
     display: inline-block;
-    margin-left: .8rem;
+    margin-left: 2rem;
 }
 .main-nav li:first-child {
     margin-left: 0; 
@@ -73,77 +91,98 @@ a.h-icon {
 .main-nav li a:visited {
     text-transform: uppercase; 
     text-decoration: none;
-    color: #212121; 
+    color: black; 
     font-weight: 700; 
-    font-size: 2rem;
+    font-size: 1.6rem;
+    text-align: right;
 }
-h1 {
-    font-size: 6rem;
+/* STICKY NAVIGATION BAR */ 
+.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #efefef;
+    padding: 1rem 0;
+    -webkit-box-shadow: 0 .2rem .5rem rgba(255, 255, 255, 0.57);
+    box-shadow: 0 .2rem .5rem rgba(255, 255, 255, 0.57);
+    z-index: 9999;
+}
+.sticky .main-nav {
+    margin-top: 0;
+    color: white;
+    margin-right: 12rem;
+}
+.sticky .h-icon {
+    margin-top: 0.2rem;
+    margin-left: 12rem;
+}
+/* CONTENT */ 
+header .row p.heading1 {
+    font-size: 7.2rem;
     text-transform: uppercase;
-    margin: 40rem 6rem 0 0;
     float: right;
     font-weight: 900;
     text-align: right;
+    margin-top: 38.5rem;
 }
-
-h1::after {
+p.heading1::after {
     content: "";
-    display: block;
     height: .4rem;
+    width: 13.8rem;
     background: black;
-    width: 12rem;
-    margin-top: 1rem;
-    margin-left: 30rem;
+    display: block;
+    margin-left: 99999rem;
 }
-header p {
+header p.fip {
     font-size: 1.8rem;
     display: inline-block;
     font-weight: 400;
-    margin: 4rem 6rem 0 55rem;
     text-align: right;
-    line-height: 2;
     color: black;
+    line-height: 2;
+    margin-left: 62rem;
+    margin-top: 4.4rem;
 }
+/* BUTTON */ 
 .btn {
     float: right;
-    margin-right: 6rem;
-    padding: .3rem 3.15rem;
-    border: .2rem solid #232323;
-    text-decoration: none; 
-    margin-top: 5rem; 
+    padding: 1.5rem 9rem;
+    border: .2rem solid black;
+    text-decoration: none;  
     font-weight: 600;
+    margin-top: 6rem;
+    font-size: 1.8rem;
 }
-
+.btn:link,
+.btn:visited {
+    color: black;
+}
 
 /* ===================== */
 /* WHO & WHY (1) SECTION */
 /* ===================== */
+
+
 .who-and-why1 {
     background: white;
     background-position: center center;
-    padding-top: 9rem;
-    padding-bottom: 9rem;
+    padding-top: 10rem;
+    padding-bottom: 11.5rem;
 }
 .who-and-why1 .row img {
     display: block;
     margin-left: auto;
-    margin: auto;
+    margin-right: auto;
     height: 3.9rem;
     width: 3.9rem;
 }
-.who-and-why1 .row h2 {
-    text-transform: capitalize;
-    text-align: center;
-    margin-top: 2rem;
-    font-weight: 900;
-}
 .who-and-why1 .row p {
     text-align: center;
-    margin-top: 6rem;
+    margin-top: 7.5rem;
     line-height: 2;
     font-weight: 400;
 }
-
 
 /* ===================== */
 /* WHO & WHY (2) SECTION */
@@ -151,9 +190,8 @@ header p {
 
 .who-and-why2 {
     background: #efefef;
-    padding-top: 4rem;
-    padding-bottom: 4rem;
-}
+    padding-top: 7.5rem;
+    padding-bottom: 11rem;
 }
 .who-and-why2 h3 {
     color: black;
@@ -163,10 +201,553 @@ header p {
     height: 3.5rem;
     margin-bottom: 1.2rem;
 }
-.little-description {
+.who-and-why2 .row .box  {
     margin-top: 2rem;
     line-height: 1.5;
 }
 .who-and-why2 .box {
-    padding: 0 5rem 0 5rem;
+    padding: 0 5rem 0 7rem;
+}
+
+
+/* ========================= */
+/* FEATURED ARTICLES SECTION */
+/* ========================= */
+
+
+.featured-articles {
+    background: white;
+}
+.featured-articles h2 {
+    margin-top: 10.8rem;
+}
+.feature-slider {
+    margin-top: 10rem;
+    position: relative;
+    margin-bottom: 14rem;
+}
+.slide {
+    background: black;
+    display: inline-block;
+    color: white; 
+    width: 34.8rem;
+    height: 34.8rem;
+    padding: 0 4rem 5rem 4rem;
+    margin: 0 2rem;
+}
+.slide .s-heading {
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    margin-bottom: 3.6rem;
+    margin-top: 6.8rem;
+    
+}
+.slide p {
+    font-size: 2.4rem;
+    margin-bottom: 7rem;
+}
+.people-photo {
+    width: 6rem;
+    float: left;
+}
+
+ .people-photo img {
+    height: 5rem;
+    width: 5rem;
+    border-radius: 50%;   
+}
+.slide .name {
+    margin-top: .3rem;
+}
+.slide .name span {
+    font-size: 1.4rem;
+    padding-bottom: 0;
+}
+.slide div.col.span_1_of_2.box {
+    padding: 0;
+}
+.pseudo {
+    width: 7.5rem;
+    height: .5rem;
+    display: block;
+    margin: auto;
+}
+.slide:hover {
+    cursor: pointer;
+}
+.slide:active {
+    cursor: -webkit-grab;
+    cursor: grab;
+}
+.slide:hover .pseudo {
+    background: #e64a19;
+}
+
+
+/* ========================= */
+/*     CLIENT SECTION        */
+/* ========================= */
+
+
+.client {
+    background: #efefef;
+}
+.client h2 {
+    margin-top: 6.5rem;
+}
+.client-slider {
+    margin-top: 6rem;
+    margin-bottom: 10rem;
+}
+.client-slide img {
+    display: block;
+    width: 90.7rem;
+    height: auto;
+    margin-right: auto;
+    margin-left: auto;
+}
+.client-slide:hover {
+    cursor: pointer;
+}
+.client-slide:active {
+    cursor: -webkit-grab;
+    cursor: grab;
+}
+
+/* ========================= */
+/*     PORTFOLIO (1) SECTION */
+/* ========================= */
+
+.portfolio1 {
+    background: white;
+}
+.portfolio1 h2 {
+    margin-top: 11rem;
+}
+.portfolio1 .row .l-description::after {
+    content: "";
+    display: block;
+    height: .7rem;
+    background: #e64a19;
+    width: 7.5rem;
+    margin-top: 5.5rem;
+    margin-right: auto;
+    margin-left: auto;
+} 
+.portfolio1 .title {
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+.portfolio1 .title {
+    margin-top: 5rem;
+}
+.portfolio1 .title p {
+    display: inline-block;
+    margin-left: 3rem;
+}
+.portfolio1 .title p:nth-child(1) {
+    margin-left: 0;
+}
+.portfolio-slider {
+    margin-top: 5rem;
+}
+.portfolio-slider {
+    margin-bottom: 60rem;
+}
+.portfolio1 .row:nth-child(2) {
+    max-width: none;
+    margin-bottom: 10rem;
+}
+
+/* ========================= */
+/*   PORTFOLIO (2) SECTION   */
+/* ========================= */
+
+.portfolio2 {
+    background: #212121;
+}
+.portfolio2 .row {
+    text-align: center;
+    color: white;
+}
+.portfolio2 .row div:first-child {
+    margin-top: 8rem;
+    margin-bottom: 2.5rem;
+}
+.portfolio2 .row .p-description {
+    margin-bottom: 4.5rem;
+    margin-left: 23.3rem;
+    margin-right: 23.3rem;
+}
+.portfolio2 .row .n {
+    margin-bottom: 6.5rem;
+    font-style: italic;
+}
+
+/* ========================= */
+/*        TEAM SECTION       */
+/* ========================= */
+
+.team {
+    background: white;
+}
+.team h2 {
+    margin-top: 10.8rem;
+}
+.team .l-description {
+    margin-top: 6rem;
+}
+.team .row .box {
+    margin-top: 10rem;
+    margin-bottom: 13rem;
+}
+.team .row div:nth-child(3) {
+    margin-left: 0;
+}
+.team .row .box img {
+    width: 10.9rem;
+    height: 10.9rem;
+    margin-bottom: 5.5rem;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+.team .row .yaga img {
+    width: 13.1rem;
+}
+.team .row .box h3 {
+    margin-bottom: 2rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+.team .row .box span {
+    text-align: center;
+    display: block;
+    font-size: 1.5rem;
+}
+
+/* ========================= */
+/* FACT & NUMBERS SECTION    */
+/* ========================= */
+
+.fact {
+    background: -webkit-gradient(linear,left top, left bottom,from(rgba(0, 0, 0, 0.60)),to(rgba(0, 0, 0, 0.60))), url(img/project-bg.jpg);
+    background: linear-gradient(rgba(0, 0, 0, 0.60),rgba(0, 0, 0, 0.60)), url(img/project-bg.jpg);
+    color: #eeeeee;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 69.1rem;
+}
+.fact h2 {
+    margin-top: 10rem;
+    margin-bottom: 7rem;
+}
+.fact .div-box {
+    height: 35.5rem;
+    width: 83rem;
+    background: rgba(255, 255, 255, 0.42);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.fact .row .div-box div:nth-child(3) {
+    margin-left: 0;
+}
+.fact .box {
+    padding: 0;
+}
+.fact .box span {
+    display: block;
+    text-align: center;
+    margin-top: 3.5rem;
+    font-size: 2.7rem;
+    font-weight: 900;
+}
+.fact .box span::after {
+    content: "";
+    display: block;
+    height: .4rem;
+    background: #4d4c4b;
+    width: 7.5rem;
+    margin-top: 2rem;
+    margin-right: auto;
+    margin-left: auto;
+}
+.fact .box p {
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 2.4rem;
+    letter-spacing: .2rem;
+}
+.div-pseudo {
+    width: 7.5rem;
+    height: .7rem;
+    margin-left: auto;
+    margin-right: auto;
+    background: #e64a19;
+    margin-bottom: 14.5rem;
+    display: block;
+}
+.fact .box span:hover::after {
+    background: black;
+}
+
+/* ========================= */
+/*        PRODUCT SECTION    */
+/* ========================= */
+
+.product {
+    background: white;
+}
+.product .row:nth-child(1) {
+    margin-top: 11rem;
+}
+.product .row:nth-child(3) {
+    margin-bottom: 11rem;
+}
+.product .text {
+    text-align: center;
+    margin: 0 7rem;
+}
+.product .text p:first-child {
+    font-size: 1.4rem;
+    font-weight: 400;
+    margin-top: 8rem;
+}
+.product .text p:nth-child(2) {
+    font-size: 2.4rem;
+    margin-top: 1.8rem;
+    letter-spacing: .1rem;
+}
+.product .text p:nth-child(3) {
+    line-height: 2;
+    margin-top: 5.8rem;
+}
+.text1, .p-img2, .text3 {
+    padding-right: 4rem;
+}
+.p-img1, .text2, .p-img3 {
+    padding-left: 4rem;
+}
+
+/* ========================= */
+/*    PRODUCT (2) SECTION    */
+/* ========================= */
+
+.product2 {
+    background: #efefef;
+}
+.product2 .p-slider {
+    margin-top: 7.6rem;
+    margin-bottom: 7.6rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.product2 .p-slider .p-slide .box:first-child {
+    height: 7.3rem;
+    width: .6rem;
+    padding: 0;
+    background: black;
+    margin-left: 8rem;
+    margin-right: 0;
+}
+.product2 .p-slider .p-slide .box:nth-child(2) p:first-child {
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+.product2 .p-slider .p-slide .box:nth-child(2) p:nth-child(2) {
+    font-size: 1.4rem;
+    font-weight: 400;
+}
+.product2 div.col.span_1_of_2.box:nth-child(2) {
+    width: 20rem;
+    margin-top: 1.3rem;
+}
+
+/* ========================= */
+/*        OPINION SECTION    */
+/* ========================= */
+
+.opinion {
+    background: white;
+}
+.opinion .row a {
+    text-align: center;
+    display: block;
+    font-size: 3rem;
+    margin-top: 7.5rem;
+    color: black;
+    height: 5rem;
+    width: 5rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+.opinion .row a:hover {
+    color: #2eefef;
+}
+.opinion .row img {
+    height: 6rem;
+    width: 6rem;
+    border-radius: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    margin-top: 5.5rem;
+}
+.opinion .row p {
+    text-align: center;
+    font-size: 2rem;
+    line-height: 2;
+    margin: 4rem 15rem 3.5rem 15rem;
+}
+.opinion .row span {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-weight: 900;
+    margin-bottom: 9.5rem;
+}
+
+/* ========================= */
+/*         FOOTER SECTION    */
+/* ========================= */
+
+footer {
+    color: #dddddd;
+    background: #212121;
+    padding-top: 7rem;
+    padding-bottom: 4rem;
+}
+footer h2 {
+    letter-spacing: 0;
+    margin-top: 0;
+    text-align: left;
+}
+footer .row .box p {
+    font-size: 1.4rem;
+    line-height: 1.5;
+    margin-top: 3.5rem;
+    margin-bottom: 4rem;
+    color: #999999;
+}
+footer .row input[type="text"],
+footer .row input[type="email"],
+footer .row textarea {
+    background: #212121;
+    border-bottom: .15rem solid #474747;
+    width: 100%;
+    font-size: 1.4rem;
+    border-right: 0;
+    border-left: 0;
+    border-top: 0;
+    padding-bottom: .5rem;
+    color: #999999;
+}
+footer div.col.span_2_of_5.box input[type="email"],
+footer div.col.span_2_of_5.box input[type="text"] {
+    width: 19.5rem;
+    display: block;
+}
+footer div.col.box input[type="text"] {
+    margin-left: auto;
+}
+footer div.col.box {
+    width: 45rem;
+}
+footer .row textarea {
+    height: 2rem;
+    resize: none;
+    margin-top: 2rem;
+}
+footer button {
+    background: #212121;
+    color: #999999;
+    border: none;
+    font-size: 1.4rem;
+    cursor: pointer;
+    margin-top: 9rem;
+}
+footer .row .lb ul {
+    margin-top: 3.5rem;
+}
+footer .row .lb ul li {
+    margin-top: 1rem;
+    display: block;
+}
+footer .row .lb ul li a {
+    text-transform: capitalize;
+    text-decoration: none;
+    margin-top: 5rem;
+    font-size: 1.4rem;
+}
+footer .row .lb ul li a:link, 
+footer .row .lb ul li a:visited {
+    color: #999999;
+}
+footer .row .lb ul li a:hover {
+    color: #999999;
+    text-decoration: underline;
+}
+footer .row .lb ul li a:active {
+    color: rgba(153, 153, 153, 0.78);
+}
+footer div.box {
+    width: 14rem;
+}
+footer .row .lb {
+    width: 20rem;
+    padding: 0 5rem;
+}
+footer .row .lb1 {
+    margin-left: 5rem;
+}
+footer .row.hr-line {
+    width: 100%;
+    height: 1%;
+    color: white;
+    display: block;
+}
+footer div.hrline {
+    height: .1rem;
+    width: 98.01%;
+    border-top: .1rem solid #999999;
+    display: block;
+    position: relative;
+    background: #999999;
+    margin-top: 35.5rem;
+}
+footer .f-l {
+    margin-top: 0;
+    height: 2rem;
+}
+footer .f-l ul li a {
+    display: inline-block;
+    float: right;
+    padding-right: 1.5rem;
+    padding-top: 1rem;
+    text-transform: capitalize;
+    text-decoration: none;
+}
+footer .f-l ul li a:link,
+footer .f-l ul li a:visited {
+    color: #999999;
+    font-size: 1.4rem;
+}
+footer .f-l ul li a:hover {
+    text-decoration: underline;
+}
+footer .f-para {
+    font-size: 1.4rem;
+    color: #999999;
+    padding-left: 1rem;
 }

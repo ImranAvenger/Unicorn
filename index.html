@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width-device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Unicorn</title>
     <!-- GOOGLE FONTS --> 
@@ -11,8 +11,10 @@
     <script src="https://kit.fontawesome.com/ee71cd956d.js" crossorigin="anonymous"></script>
     <!-- VENDORS FILES -->
     <link rel="stylesheet" href="vendors/css/normalize.css">
-    <link rel="stylesheet" href="vendors/css/grid.css"> 
-    <!-- RESOURCES FILES -->
+    <link rel="stylesheet" href="vendors/css/grid.css">
+    <link rel="stylesheet" href="vendors/css/slick.css">
+    <link rel="stylesheet" href="vendors/css/slick-theme.css">
+    <!-- CSS FILES --> 
     <link rel="stylesheet" href="resources/css/style.css">
     <link rel="stylesheet" href="resources/css/responsive.css">
 </head>
@@ -20,9 +22,9 @@
     <!-------- START HEADER SECTION -------->
        
         <header>
-            <nav>
-                <div class="row">
-                   <a href="#" class="h-icon">unicorn</a>
+            <div class="row">
+                <nav>
+                    <a href="index.html" class="h-icon">unicorn</a>
                     <ul class="main-nav">
                         <li><a href="#">home</a></li>
                         <li><a href="#">about</a></li>
@@ -30,20 +32,22 @@
                         <li><a href="#">hello</a></li>
                         <li><a href="#">&#9776;</a></li>
                     </ul>
-                </div>
-                <div class="row">
-                    <h1>storyteller</h1>
-                    <p>One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections. </p>
-                    <a href="#" class="btn">read the rest</a>
-                </div>
-            </nav>
+                <!-- MOBILE MENU --> 
+                    
+                </nav>
+            </div>
+            <div class="row">
+                <p class="heading1">storyteller</p>
+                <p class="fip">One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections.</p>
+                <a href="#" class="btn">read the rest</a>
+            </div> 
         </header>
         
     <!-------- END HEADER SECTION -------->
     
     <!---------- START WHO & WHY (1) SECTION ---------->
     
-        <section class="who-and-why1">
+        <section class="who-and-why1 services-section js--services-section" id="service">
             <div class="row">
                 <img src="resources/img/broccoli.png" alt="broccoli">
                 <h2>who & why</h2>
@@ -60,27 +64,459 @@
                 <div class="col span_1_of_3 box">
                     <img src="resources/img/clock.png" alt="clock" class="who-icon2">
                     <h3>An Wow Feature</h3>
-                    <p class="little-description">The gentlemen who rented the room would sometimes take their evening meal at home in the living.</p>
+                    <p>The gentlemen who rented the room would sometimes take their evening meal at home in the living.</p>
                 </div>
                 <div class="col span_1_of_3 box">
                     <img src="resources/img/vector.png" alt="clock" class="who-icon2">
                     <h3>An Wow Feature</h3>
-                    <p class="little-description">The gentlemen who rented the room would sometimes take their evening meal at home in the living.</p>
+                    <p>The gentlemen who rented the room would sometimes take their evening meal at home in the living.</p>
                 </div>
                 <div class="col span_1_of_3 box">
                     <img src="resources/img/land%20working.png" alt="clock" class="who-icon2">
                     <h3>An Amazing Feature</h3>
-                    <p class="little-description">The gentlemen who rented the room would sometimes take their evening meal at home in the living.</p>
+                    <p>The gentlemen who rented the room would sometimes take their evening meal at home in the living.</p>
                 </div>
             </div>
-        </secton>
+        </section>
     
-    <!-------- END START WHO & WHY (2) SECTION -------->
+    <!-------- END WHO & WHY (2) SECTION -------->
+    
+    <!------- START FEATURED ARTICLES SECTION ------->
+        
+        <section class="featured-articles">
+            <div class="row">
+                <h2>featured articles</h2>
+                <p class="l-description">The gentlemen who rented the room would sometimes take their evening meal at home in the living room that was used by everyone, and so the door to this room was often kept closed in the </p>
+                <div class="row">
+                    <div class="feature-slider">
+                        <div class="slide">
+                            <div class="pseudo">
+                                <div class="pseudo"></div>
+                            </div>
+                            <p class="s-heading">comic</p>
+                            <p>A million ways to die in the wild wild wild west</p>
+                            <div class="col span_1_of_2 box">
+                                <div class="people-photo">
+                                    <img src="resources/img/imran_2.jpg" alt="imran">
+                                </div>
+                                <div class="name">
+                                    <span>Al Imran
+                                    <br>10/12/2001</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slide">
+                            <div class="pseudo"></div>
+                            <p class="s-heading">comic</p>
+                            <p>A million ways to die in the wild wild wild west</p>
+                            <div class="col span_1_of_2 box">
+                                <div class="people-photo">
+                                    <img src="resources/img/imran_2.jpg" alt="imran">
+                                </div>
+                                <div class="name">
+                                    <span>Al Imran
+                                    <br>10/12/2001</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slide">
+                            <div class="pseudo"></div>
+                            <p class="s-heading">comic</p>
+                            <p>A million ways to die in the wild wild wild west</p>
+                            <div class="col span_1_of_2 box">
+                                <div class="people-photo">
+                                    <img src="resources/img/imran_2.jpg" alt="imran">
+                                </div>
+                                <div class="name">
+                                    <span>Al Imran
+                                    <br>10/12/2001</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slide">
+                            <div class="pseudo"></div>
+                            <p class="s-heading">comic</p>
+                            <p>A million ways to die in the wild wild wild west</p>
+                            <div class="col span_1_of_2 box">
+                                <div class="people-photo">
+                                    <img src="resources/img/imran_2.jpg" alt="imran">
+                                </div>
+                                <div class="name">
+                                    <span>Al Imran
+                                    <br>10/12/2001</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slide">
+                            <div class="pseudo"></div>
+                            <p class="s-heading">comic</p>
+                            <p>A million ways to die in the wild wild wild west</p>
+                            <div class="col span_1_of_2 box">
+                                <div class="people-photo">
+                                    <img src="resources/img/imran_2.jpg" alt="imran">
+                                </div>
+                                <div class="name">
+                                    <span>Al Imran
+                                    <br>10/12/2001</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slide">
+                            <div class="pseudo"></div>
+                            <p class="s-heading">comic</p>
+                            <p>A million ways to die in the wild wild wild west</p>
+                            <div class="col span_1_of_2 box">
+                                <div class="people-photo">
+                                    <img src="resources/img/imran_2.jpg" alt="imran">
+                                </div>
+                                <div class="name">
+                                    <span>Al Imran
+                                    <br>10/12/2001</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>   
+            </div>
+        </section>
+    
+    <!-------- END FEATURED ARTICLES SECTION -------->
+    
+    <!-------- START CLIENT SECTION -------->
+    
+        <section class="client">
+            <div class="row">
+               <h2>clients</h2>
+                <div class="client-slider">
+                    <div class="client-slide">
+                        <img src="resources/img/client1.png" alt="client1">
+                    </div>
+                    <div class="client-slide">
+                        <img src="resources/img/client2.png" alt="client2">
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+    <!--------- END CLIENT SECTION --------->
+    
+    <!--------- START PORTFOLIO (1) SECTION --------->
+    
+    <section class="portfolio1">
+        <div class="row">
+            <h2>Portfolio & Screenshots</h2>
+            <p class="l-description">The gentlemen who rented the room would sometimes take their evening meal at home in the living room that was used by everyone, and so the door to this room was often kept closed in the</p>
+            <div class="title">
+                <p>Art</p>
+                <p>Mystery</p>
+                <p>Illusion</p>
+                <p>Travel</p>
+                <p>Paintings</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="portfolio-slider">
+                <div class="portfolio-slide">
+                <img src="resources/img/portfolio1.jpg" alt="portfolio1">
+                </div>
+                <div class="portfolio-slide">
+                    <img src="resources/img/portfolio2.jpg" alt="portfolio1">
+                </div>
+                <div class="portfolio-slide">
+                    <img src="resources/img/portfolio3.jpg" alt="portfolio1">
+                </div>
+                <div class="portfolio-slide">
+                    <img src="resources/img/portfolio4.jpg" alt="portfolio1">
+                </div>
+                <div class="portfolio-slide">
+                    <img src="resources/img/portfolio1.jpg" alt="portfolio1">
+                </div>
+                <div class="portfolio-slide">
+                    <img src="resources/img/portfolio2.jpg" alt="portfolio1">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!---------- END PORTFOLIO (1) SECTION ---------->
+    
+    <!---------- START PORTFOLIO (2) SECTION ---------->
+    
+        <section class="portfolio2">
+            <div class="row">
+                <div><i class="fas fa-quote-right"></i></div>
+                <p class="p-description">Happiness cannot be traveled to, owned, earned, or worn. It is the spiritual experience of living every minute with love, grace & gratitude.</p>
+                <div class="n">
+                    <p>Denis Waitley</p>
+                </div>
+            </div>
+        </section>
+    
+    <!----------- END PORTFOLIO (2) SECTION ----------->
+    
+    <!----------- START TEAM SECTION ----------->
+    
+        <section class="team">
+            <div class="row">
+                <h2>team members</h2>
+                <p class="l-description">The gentlemen who rented the room would sometimes take their evening meal at home in the living room that was used by everyone, and so the door to this room was often kept closed in the</p>
+                <div class="col span_1_of_4 box">
+                    <img src="resources/img/t1.png" alt="James Philly">
+                    <h3>James Philly</h3>
+                    <span>Lead Developer</span>
+                </div>
+                <div class="col span_1_of_4 box">
+                    <img src="resources/img/t2.png" alt="Cactus Jack">
+                    <h3>Cactus Jack</h3>
+                    <span>3D Model Designer</span>
+                </div>
+                <div class="col span_1_of_4 box">
+                    <img src="resources/img/t3.png" alt="Jack Sparrow">
+                    <h3>Jack Sparrow</h3>
+                    <span>Master of All Trade</span>
+                </div>
+                <div class="col span_1_of_4 box yaga">
+                    <img src="resources/img/t4.png" alt="Yaga Squarehead">
+                    <h3>Yaga Squarehead</h3>
+                    <span>Manages Money</span>
+                </div>
+            </div>
+        </section>
+    
+    <!------------ END TEAM SECTION ------------>
+    
+    <!------------ START FACT & NUMBERS SECTION ------------>
+    
+        <section class="fact">
+            <div class="row">
+                <h2>Facts & Numbers</h2>
+                <div class="div-box">
+                    <div class="col span_1_of_2 box">
+                        <span class="counter">110</span>
+                        <p>successful projects</p>
+                    </div>
+                    <div class="col span_1_of_2 box">
+                        <span class="counter">25</span>
+                        <p>awesome clients</p>
+                    </div>
+                    <div class="col span_1_of_2 box">
+                        <span class="counter">30</span>
+                        <p>open source plugins</p>
+                    </div>
+                    <div class="col span_1_of_2 box">
+                        <span class="counter">13</span>
+                        <p>open source themes</p>
+                    </div>
+                </div>
+                <div class="div-pseudo"></div>
+            </div>
+        </section>
+    
+    <!------------- END FACT & NUMBER SECTION ------------->
+    
+    <!------------- START PRODUCT SECTION ------------->
+    
+        <section class="product">
+            <div class="row">
+                <div class="col span_1_of_2 box text1">
+                    <div class="text">
+                        <p>Travel / 21st March, 2014</p>
+                        <p>A New Product Is Coming </p>
+                        <p>The office assistant was the boss's man, spineless, and with no understanding. What about if he reported sick? But that would be extremely strained and suspicious as in fifteen years of service Gregor had never.</p>
+                    </div>
+                </div>
+                <div class="col span_1_of_2 box p-img1">
+                    <div>
+                        <img src="resources/img/g1.jpg" alt="camera">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+               <div class="col span_1_of_2 box p-img2">
+                   <div>
+                       <img src="resources/img/g2.jpg" alt="xbox">
+                   </div>
+               </div>
+                <div class="col span_1_of_2 box text2">
+                    <div class="text">
+                        <p>Gadget / 3rd March, 2014</p>
+                        <p>Jimmy's New Xbox Controller</p>
+                        <p>The office assistant was the boss's man, spineless, and with no understanding. What about if he reported sick? But that would be extremely strained and suspicious as in fifteen years of service Gregor had never.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col span_1_of_2 box text3">
+                    <div class="text">
+                        <p>Travel / 21st March, 2014</p>
+                        <p>A New Product Is Coming </p>
+                        <p>The office assistant was the boss's man, spineless, and with no understanding. What about if he reported sick? But that would be extremely strained and suspicious as in fifteen years of service Gregor had never.</p>
+                    </div>
+                </div>
+                <div class="col span_1_of_2 box p-img3">
+                    <div>
+                        <img src="resources/img/g3.jpg" alt="teacup">
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+    <!-------------- END PRODUCT SECTION -------------->
+    
+    <!-------------- START PRODUCT (2) SECTION -------------->
+    
+        <section class="product2">
+            <div class="row">
+                <div class="p-slider">
+                    <div class="p-slide">
+                        <div class="col span_1_of_2 box"></div>
+                        <div class="col span_1_of_2 box">
+                            <P>Another Day In Paradise</P>
+                            <p>Travel / 21st March, 2014</p>
+                        </div>
+                    </div>
+                    <div class="p-slide">
+                        <div class="col span_1_of_2 box"></div>
+                        <div class="col span_1_of_2 box">
+                            <P>Another Day In Paradise</P>
+                            <p>Travel / 21st March, 2014</p>
+                        </div>
+                    </div>
+                    <div class="p-slide">
+                        <div class="col span_1_of_2 box"></div>
+                        <div class="col span_1_of_2 box">
+                            <P>Another Day In Paradise</P>
+                            <p>Travel / 21st March, 2014</p>
+                        </div>
+                    </div>
+                    <div class="p-slide">
+                        <div class="col span_1_of_2 box"></div>
+                        <div class="col span_1_of_2 box">
+                            <P>Another Day In Paradise</P>
+                            <p>Travel / 21st March, 2014</p>
+                        </div>
+                    </div>
+                    <div class="p-slide">
+                        <div class="col span_1_of_2 box"></div>
+                        <div class="col span_1_of_2 box">
+                            <P>Another Day In Paradise</P>
+                            <p>Travel / 21st March, 2014</p>
+                        </div>
+                    </div>
+                    <div class="p-slide">
+                        <div class="col span_1_of_2 box"></div>
+                        <div class="col span_1_of_2 box">
+                            <P>Another Day In Paradise</P>
+                            <p>Travel / 21st March, 2014</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+    <!-------------- END PRODUCT (2) SECTION -------------->
+    
+    <!-------------- START OPINION SECTION -------------->
+    
+        <section class="opinion">
+            <div class="row">
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <img src="resources/img/imran_4.jpg" alt="imran">
+                <p>Happiness cannot be traveled to, owned, earned, or worn. It is the spiritual experience of living every minute with love, grace & gratitude.</p>
+                <span>@loveless</span>
+            </div>
+        </section>
+    
+    <!--------------- END OPINION SECTION --------------->
+    
+    <!--------------- START FOOTER SECTION --------------->
+    
+        <footer>
+            <div class="row">
+                <div class="col span_2_of_5 box">
+                    <h2>UNICORN</h2>
+                    <p>One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his</p>
+                    <form action="https://formspree.io/f/mgepyklk" method="POST">
+                        <div class="row">
+                            <div class="col span_1_of_2">
+                                <input type="email" name="Email" placeholder="EMAIL" required>
+                            </div>
+                            <div class="col span_1_of_2">
+                                <input type="text" name="Subject" placeholder="SUBJECT" required>
+                            </div>
+                            <div>
+                                <textarea style="overflow:hidden" name="Message" cols="30" rows="10" placeholder="MESSAGE" required></textarea>
+                            </div>
+                            <div class="row">
+                                <button type="submit">SEND <i class="fas fa-caret-right"></i></button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="col span_1_of_5 lb lb1">
+                    <h3>LINKS</h3>
+                    <ul>
+                        <li><a href="#">home</a></li>
+                        <li><a href="#">about</a></li>
+                        <li><a href="#">services</a></li>
+                        <li><a href="#">menu</a></li>
+                        <li><a href="#">restaurents</a></li>
+                        <li><a href="#">work hours</a></li>
+                        <li><a href="#">call hours</a></li>
+                    </ul>
+                </div>
+                <div class="col span_1_of_5 lb">
+                    <h3>FRIENDS</h3>
+                    <ul>
+                        <li><a href="#">home</a></li>
+                        <li><a href="#">about</a></li>
+                        <li><a href="#">services</a></li>
+                        <li><a href="#">menu</a></li>
+                        <li><a href="#">restaurents</a></li>
+                    </ul>
+                </div>
+                <div class="col span_1_of_5 lb">
+                    <h3>SOCIAL</h3>
+                    <ul>
+                        <li><a href="#">facebook</a></li>
+                        <li><a href="#">twitter</a></li>
+                        <li><a href="#">github</a></li>
+                        <li><a href="#">pinterest</a></li>
+                        <li><a href="#">google plus</a></li>
+                        <li><a href="#">dribble</a></li>
+                        <li><a href="#">flickr</a></li>
+                        <li><a href="#">others</a></li>
+                    </ul>
+                </div>
+                <div class="row hrline"></div>
+            </div>
+            <div class="row">
+                <div class="col span_1_of_2">
+                    <p class="f-para">One morning, when Gregor Samsa woke from troubled dreams, he found <br>&#169;2015 Your Awesome Company</p>
+                </div>
+                <div class="col span_1_of_2 f-l">
+                    <ul>
+                         <li><a href="#">terms</a></li>
+                         <li><a href="#">privacy policy</a></li>
+                         <li><a href="#">contact</a></li>
+                         <li><a href="#">job</a></li>
+                     </ul>
+                 </div>
+            </div>
+        </footer>
+    
+    <!---------------- END FOOTER SECTION ---------------->
+    
     <!------- JAVASCRIPT FILES ------->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="vendors/js/html5shiv.min.js"></script>
         <script src="vendors/js/respond.min.js"></script>
+        
+        <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+        <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+        <script src="vendors/js/slick.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
+        <script src="vendors/js/jquery.counterup.min.js"></script>
         <script src="resources/js/main.js"></script>
-
 </body>
 </html>
